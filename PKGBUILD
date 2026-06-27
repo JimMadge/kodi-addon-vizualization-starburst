@@ -1,19 +1,20 @@
 # Maintainer: Jim Madge <jim+aur@jmadge.com>
 pkgname=kodi-addon-visualization-starburst
-pkgver=20.2.0
-_kodiversion="Nexus"
+pkgver=21.0.2
+_kodiversion="Omega"
 pkgrel=1
 pkgdesc="StarBurst visualization for Kodi"
 arch=('any')
 url="https://github.com/xbmc/visualization.starburst"
-license=('GPL2')
+license=('GPL-2.0-only')
 depends=('kodi')
 makedepends=(
 	'cmake'
+  'glm'
 	'kodi-dev'
 )
 source=("https://github.com/xbmc/visualization.starburst/archive/refs/tags/${pkgver}-${_kodiversion}.tar.gz")
-sha256sums=('0d63b38ba8d5b3bac542546b1ecfb7d722b79652da485d75b22086e26ef4f825')
+sha256sums=('a3f70985fee6b1014e7e7599431e646f36bd3870ead78bbc8936151b805e4241')
 
 prepare() {
 	mkdir -p "${srcdir}/visualization.starburst-${pkgver}-${_kodiversion}/build"
